@@ -25,10 +25,9 @@
     .module('horizon.dashboard.project.lbaasv2', [
       'ngRoute',
     ])
-    .config(config)
+    .config(config);
     // this is the right place to add .constant() declarations for
     // the module
-    });
 
   config.$inject = [
     '$provide',
