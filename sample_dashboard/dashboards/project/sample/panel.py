@@ -24,5 +24,5 @@ LOG = logging.getLogger(__name__)
 
 class Sample(horizon.Panel):
     name = _("Sample")
-    slug = 'sample-slug'
+    slug = 'sample'
     permissions = ('openstack.services.network',)
