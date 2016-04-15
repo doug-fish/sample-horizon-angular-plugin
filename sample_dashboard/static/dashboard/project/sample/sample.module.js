@@ -22,7 +22,7 @@
    */
 
   angular
-    .module('horizon.dashboard.project.lbaasv2', [
+    .module('horizon.dashboard.project.sample', [
       'ngRoute',
     ])
     .config(config);
@@ -41,7 +41,7 @@
 
     var loadbalancers = '/project/sample';
 
-    $routerProvider.when(loadbalancers, {
+    $routeProvider.when(loadbalancers, {
         templateUrl: basePath + 'network/table.html'
       });
   }
