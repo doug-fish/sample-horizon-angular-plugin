@@ -7,7 +7,7 @@ function sample_dashboard_configure {
         $HORIZON_DIR/openstack_dashboard/local/enabled/
 }
 
-if is_service_enabled horizon && is_service_enabled q-lbaasv2; then
+if is_service_enabled horizon; then
     if [[ "$1" == "stack" && "$2" == "install" ]]; then
         # Perform installation of service source
         echo_summary "Installing sample-dashboard"
