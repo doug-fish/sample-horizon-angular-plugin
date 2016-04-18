@@ -39,9 +39,9 @@
     var basePath = $windowProvider.$get().STATIC_URL + 'dashboard/project/sample/';
     $provide.constant('horizon.dashboard.project.sample.basePath', basePath);
 
-    var loadbalancers = '/project/sample';
+    var networks = '/project/sample';
 
-    $routeProvider.when(loadbalancers, {
+    $routeProvider.when(networks, {
         templateUrl: basePath + 'network/table.html'
       });
   }
