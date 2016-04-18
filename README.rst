@@ -1,8 +1,6 @@
 Sample for the summit plugin lab
 ================================
 
-Don't use this yet unless you are fond of broken code!
-
 starting with ubuntu 14.04 image
 ::
 
