@@ -24,6 +24,7 @@
   angular
     .module('horizon.dashboard.project.sample', [
       'ngRoute',
+      'horizon.dashboard.project.sample.networks'
     ])
     .config(config);
     // this is the right place to add .constant() declarations for
