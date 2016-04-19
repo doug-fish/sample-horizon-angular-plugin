@@ -34,7 +34,8 @@
       <th class="expander"></th>
 
       <th class="rsp-p1" st-sort="name" st-sort-default="name" translate>Name</th>
-      <th class="rsp-p1" st-sort="admin_state_up" translate>Admin State Up</th>
+      <th class="rsp-p1" st-sort="admin_state_up" translate>Admin State</th>
+      <th class="rsp-p1" st-sort="shared" translate>Shared</th>
     </tr>
   </thead>
 
@@ -62,7 +63,8 @@
         </span>
       </td>
       <td class="rsp-p1"><a ng-href="project/sample/{$ ::item.id $}">{$ ::(item.name || item.id) $}</a></td>
-      <td class="rsp-p1">{$ ::item.admin_state_up | yesno $}</td>
+      <td class="rsp-p1">{$ ::item.admin_state_up | decode:table.admin_state $}</td>
+      <td class="rsp-p1">{$ ::item.shared | yesno $}</td>
       <td class="actions_column">
         <!--
         Table-row-action-column:

@@ -46,6 +46,12 @@
     ctrl.batchActions = batchActions;
     ctrl.rowActions = rowActions;
 
+    ctrl.admin_state = {
+        'true': gettext('Up'),
+        'false': gettext('Down')
+    };
+
+
     init();
 
     ////////////////////////////////
