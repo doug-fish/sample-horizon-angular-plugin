@@ -12,13 +12,15 @@
 """sample API over neutron 
 """
 
+from django.views import generic
+
 from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
 
 @urls.register
-class SampleNetwork(generic.Views):
-    """API for load balancers.
+class SampleNetwork(generic.View):
+    """ sample interface for networks
     """
     url_regex = r'sample-network/networks/$'
 
