@@ -29,10 +29,5 @@ class SampleNetwork(generic.View):
         """List networks for current project.
         The listing result is an object with property "items".
         """
-        # tenant_id = request.user.project_id
-        # loadbalancers = neutronclient(request).list_loadbalancers(
-        #     tenant_id=tenant_id).get('loadbalancers')
-        # if request.GET.get('full') and network.floating_ip_supported(request):
-        #     add_floating_ip_info(request, loadbalancers)
-        loadbalancers = neutron.network_list(request)
-        return {'items': loadbalancers}
+        networks = neutron.network_list(request)
+        return {'items': networks}
