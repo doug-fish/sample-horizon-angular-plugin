@@ -34,7 +34,7 @@
       <th class="expander"></th>
 
       <th class="rsp-p1" st-sort="name" st-sort-default="name" translate>Name</th>
-      <th class="rsp-p1" st-sort="admin_state" translate>Admin State</th>
+      <th class="rsp-p1" st-sort="admin_state_up" translate>Admin State Up</th>
     </tr>
   </thead>
 
@@ -62,7 +62,7 @@
         </span>
       </td>
       <td class="rsp-p1"><a ng-href="project/sample/{$ ::item.id $}">{$ ::(item.name || item.id) $}</a></td>
-      <td class="rsp-p1">{$ ::item.admin_state $}</td>
+      <td class="rsp-p1">{$ ::item.admin_state_up $}</td>
       <td class="actions_column">
         <!--
         Table-row-action-column:
@@ -85,20 +85,23 @@
           with the same responsive priority that they disappear.
           E.g. table header with rsp-p2 should be here with rsp-alt-p2
         -->
+       <div translate class="row">
+         <div class="col-sm-8">
+          This is a details area. There's room to put all sorts of stuff in here,
+          including long text fragments like this one.
+         </div>
+       </div>
         <div class="row">
-          <span class="rsp-alt-p2">
-            <dl class="col-sm-2">
-              <dt translate>Name</dt>
-              <dd>{$ ::item.name $}</dd>
-            </dl>
-          </span>
+          <dl class="col-sm-2">
+            <dt translate>Name</dt>
+            <dd>{$ ::item.name $}</dd>
+          </dl>
         </div>
 
         <div class="row">
           <dl class="col-sm-2">
-            <dt translate>Adminstrative State (Administrative is a long words that we'd mormally avoid,
-              but since there is so room I guess I'll use it)</dt>
-            <dd>{$ ::item.admin_state $}</dd>
+            <dt translate>Adminstrative State Up</dt>
+            <dd>{$ ::item.admin_state_up $}</dd>
           </dl>
         </div>
 
