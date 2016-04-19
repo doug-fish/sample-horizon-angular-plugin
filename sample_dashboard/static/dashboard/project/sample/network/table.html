@@ -62,7 +62,7 @@
         </span>
       </td>
       <td class="rsp-p1"><a ng-href="project/sample/{$ ::item.id $}">{$ ::(item.name || item.id) $}</a></td>
-      <td class="rsp-p1">{$ ::item.admin_state_up $}</td>
+      <td class="rsp-p1">{$ ::item.admin_state_up | yesno $}</td>
       <td class="actions_column">
         <!--
         Table-row-action-column:
