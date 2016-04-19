@@ -12,6 +12,5 @@
 # limitations under the License.
 
 # Register the REST API URLs so they can be called from the JavaScript files
-# TODO(doug-fish) after this exists, import it!
-#from sample_dashboard.api import rest  # noqa
+from sample_dashboard.api import rest  # noqa
 
