@@ -23,6 +23,7 @@
     '$location',
     'horizon.dashboard.project.sample.basePath',
     'horizon.dashboard.project.sample.networks.actions.stop-network',
+    'horizon.dashboard.project.sample.networks.actions.start-network',
     'horizon.framework.util.i18n.gettext'
   ];
 
@@ -40,7 +41,8 @@
 
    */
 
-  function tableRowActions($location, basePath, stopNetworkService, gettext) {
+  function tableRowActions($location, basePath, stopNetworkService, 
+      startNetworkService, gettext) {
 
     var service = {
       actions: actions
@@ -56,8 +58,12 @@
         template: {
           text: gettext('Stop Network')
         }
+      }, {
+        service: startNetworkService,
+        template: {
+          text: gettext('Start Network')
+        }
       }];
     }
   }
-
 })();

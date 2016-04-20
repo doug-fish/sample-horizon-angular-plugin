@@ -35,7 +35,8 @@
   function networkAPI(apiService, toastService) {
     var service = {
       getNetworks: getNetworks,
-      stopNetwork: stopNetwork
+      stopNetwork: stopNetwork,
+      startNetwork: startNetwork
     };
 
     return service;
@@ -64,6 +65,14 @@
       return apiService.put('/api/sample-network/networks/', network)
         .error(function () {
           toastService.add('error', gettext('Unable to stop Network.'));
+        });
+    }
+
+    function startNetwork(network) {
+      network.admin_state_up = true;
+      return apiService.put('/api/sample-network/networks/', network)
+        .error(function () {
+          toastService.add('error', gettext('Unable to start network.'));
         });
     }
   }
