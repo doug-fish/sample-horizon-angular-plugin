@@ -22,6 +22,7 @@
   tableRowActions.$inject = [
     '$location',
     'horizon.dashboard.project.sample.basePath',
+    'horizon.dashboard.project.sample.networks.actions.stop-network',
     'horizon.framework.util.i18n.gettext'
   ];
 
@@ -39,7 +40,7 @@
 
    */
 
-  function tableRowActions($location, basePath, gettext) {
+  function tableRowActions($location, basePath, stopNetworkService, gettext) {
 
     var service = {
       actions: actions
@@ -50,7 +51,12 @@
     ///////////////
 
     function actions() {
-      return [];
+      return [{
+        service: stopNetworkService,
+        template: {
+          text: gettext('Stop Network')
+        }
+      }];
     }
   }
 

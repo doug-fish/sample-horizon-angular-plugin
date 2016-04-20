@@ -31,3 +31,10 @@ class SampleNetwork(generic.View):
         """
         networks = neutron.network_list(request)
         return {'items': networks}
+
+    @rest_utils.ajax()
+    def put(self, request, data_required=True):
+        network_id = request.DATA['id']
+        parms = {'admin_state_up': request.DATA['admin_state_up']}
+        neutron.network_update(request, network_id, **parms)
+

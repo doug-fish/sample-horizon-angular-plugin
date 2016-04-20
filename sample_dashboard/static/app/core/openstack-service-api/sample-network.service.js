@@ -35,6 +35,7 @@
   function networkAPI(apiService, toastService) {
     var service = {
       getNetworks: getNetworks,
+      stopNetwork: stopNetwork
     };
 
     return service;
@@ -56,7 +57,14 @@
         .error(function () {
           toastService.add('error', gettext('Unable to retrieve Networks.'));
         });
+    }
 
+    function stopNetwork(network) {
+      network.admin_state_up = false;
+      return apiService.put('/api/sample-network/networks/', network)
+        .error(function () {
+          toastService.add('error', gettext('Unable to stop Network.'));
+        });
     }
   }
-}());
+})();
