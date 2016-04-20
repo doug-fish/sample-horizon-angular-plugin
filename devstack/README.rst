@@ -2,7 +2,7 @@
 Sample dashboard devstack plugin
 ==========================================
 
-This directory contains the neutron-lbaas-dashboard devstack plugin.
+This directory contains the sample-dashboard devstack plugin.
 
 To enable the plugin, add the following to your local.conf:
 
