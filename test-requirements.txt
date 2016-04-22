@@ -4,7 +4,10 @@
 
 hacking<0.11,>=0.10.0
 
-http://tarballs.openstack.org/horizon/horizon-master.tar.gz#egg=horizon
+#yank this for now. We aren't doing unit testing. I'm sure we
+#are going to have problem with stable/liberty and master coexistance
+#at some point!
+#http://tarballs.openstack.org/horizon/horizon-master.tar.gz#egg=horizon
 coverage>=3.6 # Apache-2.0
 ddt>=1.0.1 # MIT
 discover # BSD
